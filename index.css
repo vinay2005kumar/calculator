@@ -17,11 +17,15 @@ body{
     align-items: center;
 }
 .result{
-    width: 99.5%;
-    height:50px;
-    border:3px solid black;
-    font-size:50px;
+    width:500px;
+    height: 50px;
+    border: 3px solid black;
+    font-size: 50px;
+    padding-left:10px;
+    direction: rtl;
     text-align: end;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 .container{
     display: inline-block;
@@ -44,4 +48,36 @@ button:active{
 .box{
   display: flex;
   gap:0px;
+}
+@media screen and (max-width:700px){
+    body{
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: relative;
+    }
+    .container{
+        position: absolute;
+        width: 90%;
+    }
+    .result{
+        width: 405px;
+    }
+    .name{
+        position: absolute;
+        top:5em;
+        left: 4em;
+    }
+}
+@media screen and (max-width:430px) {
+    .result{
+        width: 355px!important;
+    }
+}
+@media screen and (max-width:400px) {
+    .result{
+        width: 324px;
+    }
 }
